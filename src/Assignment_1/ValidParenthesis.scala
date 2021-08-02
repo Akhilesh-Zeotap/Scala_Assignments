@@ -16,7 +16,9 @@ object ValidParenthesis extends App {
             if (count_of_open_parenthesis <= 0) false
             else helper(arr, count_of_open_parenthesis - 1)
           }
-          else false // If character is neither '(' nor ')' then it's already not valid
+          else{
+            helper(arr, count_of_open_parenthesis)
+          }
       }
     }
 
